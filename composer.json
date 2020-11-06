@@ -1,0 +1,55 @@
+{
+    "name": "thatobabusi/laravel-html-minify",
+    "description": "laravel minify html output",
+    "keywords": [
+        "thatobabusi",
+        "laravel-html-minify"
+    ],
+    "homepage": "https://github.com/thatobabusi/laravel-html-minify",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Thato Babusi",
+            "email": "thatobabusi@yahoo.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^4.8|^5.0|^6.0|^7.0|^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Thatobabusi\\LaravelHtmlMinify\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Thatobabusi\\LaravelHtmlMinify\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Thatobabusi\\LaravelHtmlMinify\\LaravelHtmlMinifyServiceProvider"
+            ],
+            "aliases": {
+                "LaravelHtmlMinify": "Thatobabusi\\LaravelHtmlMinify\\LaravelHtmlMinifyFacade"
+            }
+        }
+    }
+}
